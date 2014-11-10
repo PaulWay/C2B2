@@ -25,6 +25,7 @@ void loop() {
     rcv = mySerial.read();
     if (rcv != -1) {
       snd = rcv == '1' ? '2' : '1';
+      delay(500);
       mySerial.write(snd);
     }
   }
